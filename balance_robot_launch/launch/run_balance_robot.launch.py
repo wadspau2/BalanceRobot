@@ -20,7 +20,11 @@ def generate_launch_description():
             package = 'joy',
             namespace = _NAMESPACE,
             executable = 'joy_node',
-            name = 'joy'
+            name = 'joy',
+            parameters = [
+                {'device_id': 4},
+                {'autorepeat_rate': 0.0}
+            ]
         ),
         Node(
             package = 'led_driver',
