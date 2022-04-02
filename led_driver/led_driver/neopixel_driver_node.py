@@ -28,7 +28,7 @@ class NeopixelDriver(Node):
         self.num_neopixels = self.get_parameter('num_neopixels').value
         self.declare_parameter('neopixel_brightness',1.0)
         self.neopixel_brightness = self.get_parameter('neopixel_brightness').value
-        self.pixels = neopixel.NeoPixel(board.D18,self.num_neopixels,brightness=self.neopixel_brightness,order=neopixel.RGBW)
+        self.pixels = neopixel.NeoPixel(board.D18,self.num_neopixels,brightness=self.neopixel_brightness,pixel_order=neopixel.RGBW)
         self.gamepad = {}
         self.gamepad_previous = {}
         self.neopixel_enable = False
